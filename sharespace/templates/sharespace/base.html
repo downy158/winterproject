@@ -1,5 +1,4 @@
-
-{%  load staticfiles  %}
+{% load staticfiles %}
 <html>
     <head>
          <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -56,7 +55,8 @@
     <div class="content">
         <div class="row">
             <div class="col-md-8">
-              test
+              {% block content %}
+              {% endblock content%}
             </div>
         </div>
     </div>
