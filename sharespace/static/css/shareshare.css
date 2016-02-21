@@ -1,0 +1,10 @@
+#text {
+  margin-top: 0px;
+  font-size: 50px;
+}
+.carousel-caption {
+  top:50%;
+}
+.carousel-indicators{
+  bottom: 20%;
+}
