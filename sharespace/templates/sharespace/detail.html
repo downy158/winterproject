@@ -1,0 +1,31 @@
+{% extends 'sharespace/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+    <!-- Page Header -->
+    <div class="row" style="padding:25px; margin-top:5px; margin-bottom:0px">
+        <div class="col-lg-12" >
+            <h1 class="page-header">{{space.space_type}}
+              <small>{{korean_space_type}}</small> / {{space.name}}
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+    <!-- Projects Row -->
+    <div class="row">
+        <div class="col-lg-8">
+              <h1 class="space-name">{{space.name}}</h1>
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+        </div>
+
+    </div>
+
+    <hr>
+
+
+<!-- /.container -->
+{% endblock content %}

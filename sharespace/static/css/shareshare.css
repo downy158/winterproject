@@ -1,10 +1,18 @@
-#text {
+.text {
   margin-top: 0px;
   font-size: 50px;
 }
+
 .carousel-caption {
   top:50%;
 }
+
 .carousel-indicators{
   bottom: 20%;
+}
+
+.space-name{
+  margin-top: 0px;
+  color: #A94442;
+  font-weight: bold;
 }

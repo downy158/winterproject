@@ -19,6 +19,14 @@ class Space(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
+    @classmethod
+    def space_type_to_korean(cls, space_type):
+        for choice in cls.SPACE_TYPE_CHOICES:
+            if choice[0] == space_type:
+                return choice[1]
+
+        return None
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()

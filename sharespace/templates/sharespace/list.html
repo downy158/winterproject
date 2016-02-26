@@ -4,78 +4,36 @@
 <!-- Page Content -->
 <div class="container">
     <!-- Page Header -->
-    <div class="row" style="padding:30px">
-        <div class="col-lg-12" >
+    <div class="row" style="padding:25px; margin-top:5px">
+      <div class="col-lg-12" >
             <h1 class="page-header">{{space_type}}
-              <small>{{space_type}}</small>
+              <small>{{korean_space_type}}</small>
             </h1>
         </div>
     </div>
     <!-- /.row -->
 
+
     <!-- Projects Row -->
     <div class="row">
         <div class="col-md-6 portfolio-item">
-            {% for space in space_filter %}
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+          {% for space in space_list %}
+            <a href="{% url 'detail' space_id=space.pk %}">
+                <img class="img-responsive" src="{{space.photo}}" alt="">
             </a>
             <h3>
-                <a href="#">{{space.name}}</a>
+                <a href="{% url 'detail' space_id=space.pk %}">{{space.name}}</a>
             </h3>
             <address>
               <strong>Address(주소)</strong>
               {{space.address1}} {{space.address2}} {{space.address3s}}<br>
             </address>
             <p>{{space.description}}</p>
-            {% endfor %}
+          {% endfor %}
         </div>
     </div>
 
     <hr>
-
-    <!-- Pagination -->
-    <div class="row text-center">
-        <div class="col-lg-12">
-            <ul class="pagination">
-                <li>
-                    <a href="#">&laquo;</a>
-                </li>
-                <li class="active">
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">4</a>
-                </li>
-                <li>
-                    <a href="#">5</a>
-                </li>
-                <li>
-                    <a href="#">&raquo;</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; ShareShare Website 2016</p>
-            </div>
-        </div>
-        <!-- /.row -->
-    </footer>
-</div>
 
 <!-- /.container -->
 {% endblock content %}
