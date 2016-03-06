@@ -1,4 +1,4 @@
-.text {
+text {
   margin-top: 0px;
   font-size: 50px;
 }
@@ -15,4 +15,8 @@
   margin-top: 0px;
   color: #A94442;
   font-weight: bold;
+}
+
+@map{
+  align:right;
 }

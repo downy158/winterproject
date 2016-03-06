@@ -10,10 +10,10 @@ class Space(models.Model):
         ('METTINGROOM', '회의실'),
         ('PARKING', '주차장'),
     )
-    space_type = models.CharField(max_length=10, choices=SPACE_TYPE_CHOICES, default ='THEATER')
-    address1 = models.CharField(max_length=10)
-    address2 = models.CharField(max_length=10)
-    address3 = models.CharField(max_length=10)
+    space_type = models.CharField(max_length=20, choices=SPACE_TYPE_CHOICES, default ='THEATER')
+    address1 = models.CharField(max_length=50)
+    address2 = models.CharField(max_length=50)
+    address3 = models.CharField(max_length=50)
     description = models.TextField()
     photo = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, null=True, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
