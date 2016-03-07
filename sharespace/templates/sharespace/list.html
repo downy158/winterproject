@@ -19,7 +19,9 @@
         <div class="col-md-6 portfolio-item">
           {% for space in space_list %}
             <a href="{% url 'detail' space_id=space.pk %}">
-                <img class="img-responsive" src="{{space.photo.url}}" alt="">
+                {% if space.photo %}
+                  <img class="img-responsive" src="{{space.photo.url}}" alt="">
+                {% endif %}
             </a>
             <h3>
                 <a href="{% url 'detail' space_id=space.pk %}">{{space.name}}</a>
