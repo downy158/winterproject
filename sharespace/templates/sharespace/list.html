@@ -20,7 +20,7 @@
           {% for space in space_list %}
             <a href="{% url 'detail' space_id=space.pk %}">
                 {% if space.photo %}
-                  <img class="img-responsive" src="{{space.photo.url}}" alt="">
+                <img class="img-responsive" src="{{space.photo.url}}" alt="">
                 {% endif %}
             </a>
             <h3>

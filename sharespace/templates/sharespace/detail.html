@@ -18,11 +18,7 @@
     <div class="row">
         <div class="col-lg-8">
               <h1 class="space-name">{{space.name}}<small>{{space.address1}} {{space.address2}} {{space.address3}}</small></h1>
-              {% if space.photo %}
-                <img src ="{{space.photo.url}}" width=40% height=250px />
-              {% else %}
-                <img class="img-responsive" src ="http://placehold.it/250x250"width=40% height=250px />
-              {% endif %}
+              <img src ="{{space.photo.url}}" width=40% height=250px />
               <div id="map" style="width:40%;height:250px;display:inline-block;vertical-align:top;margin-left:10%"></div>
 
               <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=a1b484d6bb606ab507a4ae5aca0fd8e8&libraries=services"></script>

@@ -15,7 +15,7 @@ class Space(models.Model):
     address2 = models.CharField(max_length=50)
     address3 = models.CharField(max_length=50)
     description = models.TextField()
-    photo = models.ImageField(max_length=100, null=True, blank=True)
+    photo = models.ImageField(null=True, blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
